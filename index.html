@@ -788,6 +788,367 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Left-align portfolio sections from About through Contact */
+    #about,
+    #skills,
+    #projects,
+    #experience,
+    #contact {
+      text-align: left;
+    }
+
+    #about .section-label,
+    #about .section-title,
+    #skills .section-label,
+    #skills .section-title,
+    #projects .section-label,
+    #projects .section-title,
+    #experience .section-label,
+    #experience .section-title {
+      text-align: left;
+      max-width: 1150px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-text,
+    .section-intro {
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .skill-card,
+    .project-card,
+    .tl-item {
+      text-align: left;
+    }
+
+    .skill-icon {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .tags,
+    .project-footer,
+    .contact-links {
+      justify-content: flex-start;
+    }
+
+    .project-body {
+      align-items: flex-start;
+    }
+
+    .tl-desc {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .contact-card {
+      text-align: left;
+    }
+
+
+    /* Old portfolio design applied from About section to Contact */
+section { padding: 72px 6%; }
+
+section:nth-child(even) { background: var(--gray-50); }
+
+.section-label { font-size: .75rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; }
+
+.section-title { font-size: 1.75rem; font-weight: 800; color: var(--navy); letter-spacing: -.3px; margin-bottom: 40px; }
+
+.section-title span { color: var(--blue); }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.about-grid { grid-template-columns: 1fr; }
+
+.about-text { font-size: 1rem; color: var(--gray-600); line-height: 1.8; }
+
+.about-text p + p { margin-top: 14px; }
+
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.stat-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; text-align: center; box-shadow: var(--shadow); }
+
+.stat-num { font-size: 2rem; font-weight: 800; color: var(--blue); }
+
+.stat-label { font-size: .82rem; color: var(--gray-600); margin-top: 4px; }
+
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+
+.skill-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s; }
+
+.skill-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+
+.skill-card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+
+.skill-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+
+.skill-card h3 { font-size: .9rem; font-weight: 700; color: var(--navy); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.tag { background: var(--gray-100); color: var(--gray-600); font-size: .78rem; font-weight: 500; padding: 3px 10px; border-radius: 99px; }
+
+.tag.blue { background: var(--blue-light); color: var(--blue); }
+
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+
+.project-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s; display: flex; flex-direction: column; }
+
+.project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+.project-top { height: 6px; background: linear-gradient(90deg, var(--blue), #60A5FA); }
+
+.project-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+
+.project-tool { font-size: .72rem; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; }
+
+.project-body h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+
+.project-body p { font-size: .88rem; color: var(--gray-600); line-height: 1.6; flex: 1; }
+
+.project-footer { padding: 14px 22px; border-top: 1px solid var(--gray-100); display: flex; gap: 10px; flex-wrap: wrap; }
+
+.project-link { font-size: .82rem; font-weight: 600; text-decoration: none; color: var(--blue); display: flex; align-items: center; gap: 5px; transition: opacity .2s; }
+
+.project-link:hover { opacity: .75; }
+
+.coming-soon { font-size: .78rem; color: var(--gray-400); font-style: italic; }
+
+.timeline { max-width: 740px; }
+
+.tl-item { display: flex; gap: 24px; margin-bottom: 36px; }
+
+.tl-left { display: flex; flex-direction: column; align-items: center; }
+
+.tl-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--blue); flex-shrink: 0; margin-top: 4px; }
+
+.tl-line { width: 2px; background: var(--gray-200); flex: 1; margin-top: 6px; }
+.tl-line { display: none; }
+
+.tl-item:last-child .tl-line { display: none; }
+
+.tl-right { padding-bottom: 8px; }
+
+.tl-dates { font-size: .78rem; font-weight: 600; color: var(--blue); margin-bottom: 4px; }
+
+.tl-title { font-size: 1rem; font-weight: 700; color: var(--navy); }
+
+.tl-company { font-size: .88rem; color: var(--gray-600); margin-bottom: 8px; }
+
+.tl-desc { font-size: .88rem; color: var(--gray-600); line-height: 1.7; }
+
+.contact-card { background: linear-gradient(135deg, var(--navy) 0%, #1E3A6E 100%); border-radius: 16px; padding: 56px 48px; text-align: center; color: var(--white); }
+.contact-card { padding: 40px 24px; }
+
+.contact-card h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; }
+
+.contact-card p { color: #94A3B8; margin-bottom: 32px; font-size: 1rem; }
+
+.contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
+
+.contact-btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: var(--radius); font-size: .9rem; font-weight: 600; text-decoration: none; transition: all .2s; }
+
+.contact-btn.white { background: var(--white); color: var(--navy); }
+
+.contact-btn.white:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(255,255,255,.2); }
+
+.contact-btn.ghost { border: 1.5px solid rgba(255,255,255,.25); color: var(--white); }
+
+.contact-btn.ghost:hover { border-color: var(--white); transform: translateY(-2px); }
+
+    /* Full-screen refinement for desktop */
+    #about,
+    #skills,
+    #projects,
+    #experience,
+    #contact {
+      width: 100%;
+      max-width: none;
+      text-align: left;
+      padding: 72px 6%;
+    }
+
+    #about .section-label,
+    #about .section-title,
+    #skills .section-label,
+    #skills .section-title,
+    #projects .section-label,
+    #projects .section-title,
+    #experience .section-label,
+    #experience .section-title {
+      text-align: left;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    #about .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(420px, 1fr);
+      gap: 48px;
+      align-items: start;
+      width: 100%;
+    }
+
+    #skills .skills-grid {
+      width: 100%;
+      max-width: none;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    #projects .projects-grid {
+      width: 100%;
+      max-width: none;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+
+    #experience .timeline {
+      max-width: 900px;
+      margin-left: 0;
+      margin-right: 0;
+      display: block;
+    }
+
+    #contact .contact-card {
+      width: 100%;
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media (max-width: 768px) {
+      #about,
+      #skills,
+      #projects,
+      #experience,
+      #contact {
+        padding: 56px 5%;
+      }
+
+      #about .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* Experience section vertical timeline like screenshot */
+    #experience {
+      text-align: left;
+      padding: 72px 6%;
+    }
+
+    #experience .section-label,
+    #experience .section-title {
+      text-align: left;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    #experience .timeline {
+      max-width: 900px;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      display: block !important;
+    }
+
+    #experience .tl-item {
+      display: flex !important;
+      gap: 24px;
+      margin-bottom: 36px;
+      padding: 0 !important;
+      background: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      text-align: left !important;
+      transform: none !important;
+    }
+
+    #experience .tl-item:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    #experience .tl-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    #experience .tl-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--blue);
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    #experience .tl-line {
+      width: 2px;
+      background: var(--gray-200);
+      flex: 1;
+      margin-top: 6px;
+      min-height: 110px;
+    }
+
+    #experience .tl-item:last-child .tl-line {
+      display: none;
+    }
+
+    #experience .tl-right {
+      padding-bottom: 8px;
+    }
+
+    #experience .tl-dates {
+      display: block;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 4px;
+    }
+
+    #experience .tl-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    #experience .tl-company {
+      font-size: .88rem;
+      color: var(--gray-600);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    #experience .tl-desc {
+      font-size: .88rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      max-width: 720px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media (max-width: 768px) {
+      #experience .timeline {
+        max-width: 100%;
+      }
+
+      #experience .tl-item {
+        gap: 18px;
+      }
+    }
+
   </style>
 </head>
 
@@ -850,191 +1211,203 @@
 </section>
 
 <section id="about">
-  <div class="section-label">About Me</div>
+  <div class="section-label">About me</div>
   <div class="section-title">Quality is not an act, it's a <span>habit</span></div>
-  <div class="about-text">
-    <p>I'm an ISTQB Certified Software Development Engineer in Test with 5+ years of experience in software testing and 7+ years of software development experience. I have worked across AI, web, mobile, desktop, and enterprise applications while collaborating closely with engineering teams to deliver reliable software.</p>
-    <p>My background as a software developer at Wipro Technologies gives me a strong foundation in software architecture, programming, debugging, and automation design. Most recently, I worked as a QA Test Lead on Claude at Anthropic via Testlio, where I led end-to-end quality efforts across web, mobile, desktop, and plugin experiences.</p>
-    <p>I'm currently focused on strengthening my SDET expertise by building modern automation frameworks from scratch using Playwright, TypeScript, Selenium, Java, REST Assured, and API automation.</p>
-  </div>
-
-  <div class="stats">
-    <div class="stat-card"><div class="stat-num">5+</div><div class="stat-label">Years in QA Testing</div></div>
-    <div class="stat-card"><div class="stat-num">7</div><div class="stat-label">Years in Software Dev</div></div>
-    <div class="stat-card"><div class="stat-num">6</div><div class="stat-label">Automation Projects</div></div>
-    <div class="stat-card"><div class="stat-num">AI</div><div class="stat-label">Product Testing</div></div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm an ISTQB Certified Software Development Engineer in Test (SDET) with 5+ years of experience in software testing and 7+ years of software development experience. I have worked across AI, web, mobile, and enterprise applications, leading quality initiatives and collaborating closely with engineering teams to deliver reliable software.</p>
+      <p>My background as a software developer at Wipro Technologies gives me a strong foundation in software architecture, programming, and debugging, enabling me to build effective automation solutions and understand applications beyond the UI.</p>
+      <p>Most recently, I worked as a QA Test Lead on Claude at Anthropic (via Testlio), where I led end-to-end quality efforts for web and mobile applications, managed release testing, mentored testers, and partnered with cross-functional teams to improve product quality.</p>
+      <p>I'm currently focused on strengthening my SDET expertise by building modern automation frameworks from scratch using Playwright, TypeScript, and API automation. I'm passionate about designing scalable, maintainable test automation, learning new technologies, and continuously improving software quality through automation.</p>
+    </div>
+    <div class="stats">
+      <div class="stat-card"><div class="stat-num">5+</div><div class="stat-label">Years in QA Testing</div></div>
+      <div class="stat-card"><div class="stat-num">7</div><div class="stat-label">Years in Software Dev</div></div>
+      <div class="stat-card"><div class="stat-num">5</div><div class="stat-label">Automation Projects</div></div>
+      <div class="stat-card"><div class="stat-num">AI</div><div class="stat-label">Current Testing Domain</div></div>
+    </div>
   </div>
 </section>
 
 <section id="skills">
-  <div class="section-label">What I Work With</div>
+  <div class="section-label">What I work with</div>
   <div class="section-title">Skills & <span>Tools</span></div>
   <div class="skills-grid">
     <div class="skill-card">
-      <div class="skill-icon">🧪</div>
-      <h3>Testing Types</h3>
-      <div class="tags"><span class="tag blue">Functional</span><span class="tag blue">Regression</span><span class="tag blue">Exploratory</span><span class="tag">UAT</span><span class="tag">Test Planning</span><span class="tag">Release Testing</span></div>
+      <div class="skill-card-head"><div class="skill-icon">🧪</div><h3>Testing Types</h3></div>
+      <div class="tags"><span class="tag blue">Functional</span><span class="tag blue">Regression</span><span class="tag blue">Exploratory</span><span class="tag">UAT</span><span class="tag">Test Planning</span><span class="tag">Test Case Design</span></div>
     </div>
-
     <div class="skill-card">
-      <div class="skill-icon">⚙️</div>
-      <h3>Automation Frameworks</h3>
-      <div class="tags"><span class="tag blue">Playwright</span><span class="tag blue">Selenium</span><span class="tag blue">Cypress</span><span class="tag">Appium</span><span class="tag">BrowserStack</span></div>
+      <div class="skill-card-head"><div class="skill-icon">⚙️</div><h3>Automation Frameworks</h3></div>
+      <div class="tags"><span class="tag blue">Cypress</span><span class="tag blue">Playwright</span><span class="tag blue">Selenium</span><span class="tag">Appium</span><span class="tag">BrowserStack</span></div>
     </div>
-
     <div class="skill-card">
-      <div class="skill-icon">💻</div>
-      <h3>Languages</h3>
-      <div class="tags"><span class="tag blue">Java</span><span class="tag blue">TypeScript</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">C#</span><span class="tag">HTML</span></div>
+      <div class="skill-card-head"><div class="skill-icon">💻</div><h3>Languages</h3></div>
+      <div class="tags"><span class="tag blue">TypeScript</span><span class="tag blue">Python</span><span class="tag">C#</span><span class="tag">SQL</span><span class="tag">HTML</span><span class="tag">XML</span></div>
     </div>
-
     <div class="skill-card">
-      <div class="skill-icon">🔗</div>
-      <h3>API & Integration</h3>
-      <div class="tags"><span class="tag blue">REST Assured</span><span class="tag blue">Postman</span><span class="tag">REST APIs</span><span class="tag">JSON</span><span class="tag">Newman</span></div>
+      <div class="skill-card-head"><div class="skill-icon">🔗</div><h3>API & Integration</h3></div>
+      <div class="tags"><span class="tag blue">Postman</span><span class="tag blue">REST APIs</span><span class="tag">Newman</span><span class="tag">JIRA</span><span class="tag">TestRail</span><span class="tag">QASE</span></div>
     </div>
-
     <div class="skill-card">
-      <div class="skill-icon">📊</div>
-      <h3>Tools & Observability</h3>
-      <div class="tags"><span class="tag blue">Jira</span><span class="tag blue">Qase</span><span class="tag">TestRail</span><span class="tag">Grafana</span><span class="tag">Prometheus</span></div>
+      <div class="skill-card-head"><div class="skill-icon">📊</div><h3>Monitoring & Observability</h3></div>
+      <div class="tags"><span class="tag blue">Grafana</span><span class="tag blue">Prometheus</span><span class="tag">Application Insights</span></div>
     </div>
-
     <div class="skill-card">
-      <div class="skill-icon">🤖</div>
-      <h3>AI Product Testing</h3>
+      <div class="skill-card-head"><div class="skill-icon">🤖</div><h3>AI Product Testing</h3></div>
       <div class="tags"><span class="tag blue">LLM Behavior</span><span class="tag blue">Agentic Workflows</span><span class="tag">Conversational UI</span><span class="tag">Cross-platform</span></div>
     </div>
   </div>
 </section>
 
 <section id="projects">
-  <div class="section-label">My Work</div>
-  <div class="section-title">Featured Automation <span>Projects</span></div>
+  <div class="section-label">My work</div>
+  <div class="section-title">Automation <span>Projects</span></div>
   <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-top"></div>
-      <div class="project-body">
-        <div class="project-tool">🎭 Playwright · TypeScript</div>
-        <h3>Cross-Browser Test Framework</h3>
-        <p>Multi-browser automation for OrangeHRM running across Chromium, Firefox, WebKit, and Mobile Chrome. Includes Page Object Model, HTML reporting, and GitHub Actions CI.</p>
-      </div>
-      <div class="project-footer">
-        <a href="https://github.com/abhamondal/playwright-cross-browser" target="_blank" class="project-link">View on GitHub →</a>
-      </div>
-    </div>
 
     <div class="project-card">
       <div class="project-top"></div>
       <div class="project-body">
-        <div class="project-tool">☕ Java · Selenium</div>
-        <h3>Hybrid Automation Framework</h3>
-        <p>Hybrid framework using Java, Selenium WebDriver, TestNG, Maven, REST Assured, Jenkins, Extent Reports, Page Object Model, data-driven testing, retry logic, screenshots, and cross-browser execution.</p>
-      </div>
-      <div class="project-footer">
-        <a href="https://github.com/abhamondal/HybridAutomationFramework" target="_blank" class="project-link">View on GitHub →</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-top"></div>
-      <div class="project-body">
-        <div class="project-tool">🧪 Cypress · TypeScript</div>
+        <div class="project-tool">Cypress · TypeScript</div>
         <h3>E2E Web Test Suite</h3>
-        <p>End-to-end automation for OrangeHRM covering login, dashboard, employee management, and leave flows with Page Object Model, custom commands, and CI integration.</p>
+        <p>End-to-end test automation for OrangeHRM covering login, dashboard, employee management and leave flows. Page Object Model, custom commands, and CI via GitHub Actions.</p>
       </div>
       <div class="project-footer">
-        <a href="https://github.com/abhamondal/cypress-orangehrm" target="_blank" class="project-link">View on GitHub →</a>
+        <a href="https://github.com/abhamondal/cypress-orangehrm" target="_blank" class="project-link">⌥ View on GitHub →</a>
       </div>
     </div>
 
     <div class="project-card">
       <div class="project-top"></div>
       <div class="project-body">
-        <div class="project-tool">🌐 Python · API</div>
+        <div class="project-tool">Playwright · TypeScript</div>
+        <h3>Cross-Browser Test Framework</h3>
+        <p>Multi-browser automation for OrangeHRM running in parallel across Chromium, Firefox, WebKit and Mobile Chrome. Page Object Model with HTML reporting and GitHub Actions CI.</p>
+      </div>
+      <div class="project-footer">
+        <a href="https://github.com/abhamondal/playwright-cross-browser" target="_blank" class="project-link">⌥ View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-top"></div>
+      <div class="project-body">
+        <div class="project-tool">Python · pytest · requests</div>
         <h3>API Test Automation Suite</h3>
-        <p>REST API suite covering GET, POST, PUT, PATCH, DELETE, authentication, response validation, reusable API client, shared fixtures, and HTML reporting.</p>
+        <p>REST API test suite covering GET, POST, PUT, PATCH, DELETE, authentication and error handling against ReqRes. Reusable API client, shared fixtures and HTML reporting.</p>
       </div>
       <div class="project-footer">
-        <a href="https://github.com/abhamondal/api-automation-suite" target="_blank" class="project-link">View on GitHub →</a>
+        <a href="https://github.com/abhamondal/api-automation-suite" target="_blank" class="project-link">⌥ View on GitHub →</a>
       </div>
     </div>
 
     <div class="project-card">
       <div class="project-top"></div>
       <div class="project-body">
-        <div class="project-tool">📱 Appium · Python</div>
+        <div class="project-tool">Appium · Python</div>
         <h3>Mobile Test Automation</h3>
-        <p>Mobile automation for iOS and Android using Appium, covering gesture interactions, device-specific flows, and regression across multiple OS versions.</p>
+        <p>Automated test suite for iOS and Android mobile apps using Appium. Covers gesture interactions, device-specific flows, and regression across multiple OS versions.</p>
       </div>
       <div class="project-footer">
-        <a href="https://github.com/abhamondal/appium-mobile-tests" target="_blank" class="project-link">View on GitHub →</a>
+        <a href="https://github.com/abhamondal/appium-mobile-tests" target="_blank" class="project-link">⌥ View on GitHub →</a>
       </div>
     </div>
 
     <div class="project-card">
       <div class="project-top"></div>
       <div class="project-body">
-        <div class="project-tool">🤖 AI Testing · LLM Quality</div>
-        <h3>AI Response Quality Framework</h3>
-        <p>Test strategy for validating AI model behavior, response consistency, context handling, edge case prompts, regression risks, and cross-platform AI product quality.</p>
+        <div class="project-tool">Python · Selenium</div>
+        <h3>Selenium POM Framework</h3>
+        <p>Scalable Selenium framework for OrangeHRM using Page Object Model in Python. BasePage helper class, WebDriverManager for driver setup, pytest fixtures and HTML reporting.</p>
       </div>
       <div class="project-footer">
-        <span class="coming-soon">Internal project · write-up coming soon</span>
+        <a href="https://github.com/abhamondal/selenium-pom-framework" target="_blank" class="project-link">⌥ View on GitHub →</a>
       </div>
     </div>
-  </div>
+    
+<div class="project-card">
+      <div class="project-top"></div>
+      <div class="project-body">
+        <div class="project-tool">Java · Selenium </div>
+        <h3>Hybrid Automation Framework </h3>
+        <p>Hybrid Selenium Automation Framework using Java, Selenium WebDriver, TestNG, Maven, REST Assured, Jenkins, Extent Reports, and Page Object Model. Implemented Data-Driven Testing using Excel, Parallel Execution, Retry Mechanism, Screenshot Capture, API-UI Validation, Cross-Browser Testing, and CI/CD integration, covering 50+ automated test scenarios across 10 application modules.</p>
+      </div>
+      <div class="project-footer">
+         <a href="https://github.com/abhamondal/HybridAutomationFramework" target="_blank" class="project-link">⌥ View on GitHub →</a>
+      </div>
+    </div>
+
+ 
+    <div class="project-card">
+      <div class="project-top" style="background: linear-gradient(90deg, #7C3AED, #A78BFA);"></div>
+      <div class="project-body">
+        <div class="project-tool" style="color: #7C3AED;">AI Testing · LLM Quality</div>
+        <h3>AI Response Quality Framework</h3>
+        <p>Test strategy and tooling for validating AI model behavior — covering response consistency, edge case inputs, context handling, and regression across model versions.</p>
+      </div>
+      <div class="project-footer">
+        <span class="coming-soon">🔒 Internal project — write-up coming soon</span>
+      </div>
+    </div>
+
 </section>
 
 <section id="experience">
   <div class="section-label">Career</div>
   <div class="section-title">Work <span>Experience</span></div>
-
   <div class="timeline">
     <div class="tl-item">
-      <div class="tl-dates">Jan 2026 - Jun 2026</div>
-      <div class="tl-title">QA Test Lead - AI Products</div>
-      <div class="tl-company">Anthropic Claude · via Testlio · Cypress, TX</div>
-      <div class="tl-desc">Led end-to-end QA for Claude and Claude Code across web, mobile, desktop, and plugin experiences. Owned test planning, regression support, defect triage, release readiness, and cross-functional communication.</div>
+      <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-right">
+        <div class="tl-dates">Jan 2026 – Present</div>
+        <div class="tl-title">QA Test Lead – AI Products</div>
+        <div class="tl-company">Anthropic (Claude) · via Testlio · Cypress, TX</div>
+        <div class="tl-desc">Lead end-to-end QA for Claude and Claude Code across web, mobile (iOS and Android), desktop and CLI surfaces. Own test strategy, regression suites and defect lifecycle management. Validate model behavior, agentic workflows and cross-platform quality.</div>
+      </div>
     </div>
-
     <div class="tl-item">
-      <div class="tl-dates">May 2023 - Jan 2026</div>
-      <div class="tl-title">QA Analyst / QA Tester - Mobile & Web Applications</div>
-      <div class="tl-company">Tinder · via Testlio · Remote</div>
-      <div class="tl-desc">Performed functional, regression, exploratory, accessibility, and cross-platform testing across iOS, Android, and web experiences. Supported web automation testing flows and production release quality.</div>
+      <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-right">
+        <div class="tl-dates">May 2024 – Dec 2025</div>
+        <div class="tl-title">QA Tester – Mobile Applications</div>
+        <div class="tl-company">Tinder · via Testlio · Cypress, TX</div>
+        <div class="tl-desc">Regression and functional testing for iOS and Android apps. Built reusable test cases from user stories, tracked defects in JIRA and monitored API performance with Prometheus.</div>
+      </div>
     </div>
-
     <div class="tl-item">
-      <div class="tl-dates">Jul 2022 - May 2023</div>
-      <div class="tl-title">Freelance QA Tester</div>
-      <div class="tl-company">Testlio · Remote</div>
-      <div class="tl-desc">Tested multiple high-profile products across browsers, operating systems, mobile devices, connected devices, gaming consoles, and Smart TVs. Reported reproducible defects with logs and diagnostic details.</div>
+      <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-right">
+        <div class="tl-dates">Jul 2022 – Present</div>
+        <div class="tl-title">Freelance QA Tester</div>
+        <div class="tl-company">Testlio · Remote</div>
+        <div class="tl-desc">Functional, usability and exploratory testing across diverse client applications. Validated web and mobile apps across multiple environments and identified critical issues before production.</div>
+      </div>
     </div>
-
     <div class="tl-item">
-      <div class="tl-dates">Jul 2007 - Jul 2013</div>
-      <div class="tl-title">Technical Leader</div>
-      <div class="tl-company">Wipro Technologies · Noida, India</div>
-      <div class="tl-desc">Led development and testing of enterprise applications. Mentored junior engineers, supported requirement analysis, debugging, defect resolution, and code quality improvements.</div>
+      <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-right">
+        <div class="tl-dates">Jul 2007 – Jul 2013</div>
+        <div class="tl-title">Technical Leader</div>
+        <div class="tl-company">Wipro Technologies · Noida, India</div>
+        <div class="tl-desc">Led development and testing of enterprise applications. Mentored junior engineers, enforced code quality standards and drove requirement analysis and defect resolution across teams.</div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <div class="contact-card">
-    <h2>Let's Build Quality Software Together</h2>
-    <p>Open to QA Lead, QA Automation Engineer, SDET, and AI Quality Engineering roles.</p>
+    <h2>Let's work together</h2>
+    <p>Open to QA Lead, Automation Engineer and AI Quality roles. Feel free to reach out.</p>
     <div class="contact-links">
       <a href="mailto:chhavi.abha@gmail.com" class="contact-btn white">✉ chhavi.abha@gmail.com</a>
-      <a href="https://linkedin.com/in/abha10" target="_blank" class="contact-btn ghost">💼 LinkedIn</a>
-      <a href="https://github.com/abhamondal" target="_blank" class="contact-btn ghost">💻 GitHub</a>
-      <a href="resume.pdf" target="_blank" class="contact-btn ghost">📄 Resume</a>
+      <a href="https://linkedin.com/in/abha10" target="_blank" class="contact-btn ghost">in LinkedIn</a>
+      <a href="https://github.com/abhamondal" target="_blank" class="contact-btn ghost">⌥ GitHub</a>
     </div>
   </div>
 </section>
 
-<footer>Designed & built by Abha · 2026</footer>
+<footer>Designed & built by Abha Singh · 2026</footer>
 
 </body>
 </html>
